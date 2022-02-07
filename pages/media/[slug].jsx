@@ -6,6 +6,8 @@ import withApollo from '~/server/apollo';
 import { GET_PRODUCT } from '~/server/queries';
 import Video from '~/components/partials/media/video';
 import BuyForm from '~/components/partials/media/BuyForm';
+import Sidebar from '~/components/partials/media/Sidebar';
+import InfoOne from '~/components/partials/product/info-tabs/info-one';
 
 import Breadcrumb from '~/components/partials/media/breadcrumb';
 
@@ -37,11 +39,11 @@ function Media () {
                         <div className="col-lg-9">
                             <div className="product-details-top">
                                 <div className={ "row skel-pro-single loaded" }>
-                                    <div className="col-md-8">
+                                    <div className="col-md-7">
                                         <Video />
                                     </div>
 
-                                    <div className="col-md-4">
+                                    <div className="col-md-5">
                                         <div className="entry-summary row">
                                             <div className="col-md-12">
                                                 <div className="entry-summary1 mt-2 mt-md-0"></div>
@@ -54,23 +56,17 @@ function Media () {
                                     </div>
                                 </div>
                             </div>
-                            {
-                                    <div className="skel-pro-tabs"></div>
-                            }
-                            <div className="nav-none">
-                                {/* <RelatedProductsOne products={ related } loading={ loading } /> */}
-                            </div>
+                            <InfoOne />
                         </div>
                         <div className="col-lg-3 skeleton-body">
                              <StickyBox className={ `sticky-content skel-pro-single}` } offsetTop={ 70 }>
-                                <div className="skel-widget"></div>
-                                <div className="skel-widget"></div>
-                                {/* <Sidebar products={ related } loading={ loading } /> */}
+                                <Sidebar />
                             </StickyBox>
                         </div>
                     </div>
                 </div >
             </div >
+
         </div >
         </>
     )
