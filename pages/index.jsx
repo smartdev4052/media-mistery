@@ -20,6 +20,7 @@ import Question from '~/components/Question';
 // Import Utils
 import { catFilter } from '~/utils';
 import { fadeIn } from '~/utils/data';
+import Banner from '~/components/home/banner';
 
 function Home () {
     const { data, loading, error } = useQuery( GET_HOME_DATA );
@@ -76,69 +77,15 @@ function Home () {
                 <h2 className="text-center"> Most Purchased Services </h2>
                 <div className="row justify-content-center">
                     <div className="col-sm-6 col-md-4">
-                        <div className="banner banner-overlay banner-sm banner-ad content-right align-center">
-                            <figure className="mb-0 lazy-media">
-                                <div className="lazy-overlay"></div>
-                                <LazyLoadImage
-                                    alt="banner"
-                                    src=""
-                                    threshold={ 200 }
-                                    width="100%"
-                                    height="auto"
-                                    effect="blur"
-                                />
-                            </figure>
-
-                            <div className="banner-content">
-                                <h4 className="banner-title">Instagram Followers</h4>
-                                <h4 className="banner-price"><span className="price">Price Start From $19.99</span></h4>
-                                <ALink href="/shop/sidebar/list" className="banner-link">ORDER NOW</ALink>
-                            </div>
-                        </div>
+                        <Banner title="Instagram Followers" price="19.99"/>
                     </div>
 
                     <div className="col-sm-6 col-md-4">
-                        <div className="banner banner-overlay banner-sm banner-ad content-right align-center">
-                            <figure className="mb-0 lazy-media">
-                                <div className="lazy-overlay"></div>
-                                <LazyLoadImage
-                                    alt="banner"
-                                    src="images/home/banners/banner-6.jpg"
-                                    threshold={ 200 }
-                                    width="100%"
-                                    height="auto"
-                                    effect="blur"
-                                />
-                            </figure>
-
-                            <div className="banner-content">
-                                <h4 className="banner-title">YouTube Views</h4>
-                                <h4 className="banner-price"><span className="price">Price Start From $13</span></h4>
-                                <ALink href="/shop/sidebar/list" className="banner-link">ORDER NOW</ALink>
-                            </div>
-                        </div>
+                        <Banner title="YouTube Views" price="13" />
                     </div>
 
                     <div className="col-sm-6 col-md-4">
-                        <div className="banner banner-overlay banner-sm banner-ad content-right align-center">
-                            <figure className="mb-0 lazy-media">
-                                <div className="lazy-overlay"></div>
-                                <LazyLoadImage
-                                    alt="banner"
-                                    src="images/home/banners/banner-6.jpg"
-                                    threshold={ 200 }
-                                    width="100%"
-                                    height="auto"
-                                    effect="blur"
-                                />
-                            </figure>
-
-                            <div className="banner-content">
-                                <h4 className="banner-title">Twitter Followers</h4>
-                                <h4 className="banner-price"><span className="price">Price Start From $2</span></h4>
-                                <ALink href="/shop/sidebar/list" className="banner-link">ORDER NOW</ALink>
-                            </div>
-                        </div>
+                        <Banner title="Twitter Followers" price="2"/>
                     </div>
                 </div>
             </div>

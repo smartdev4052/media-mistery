@@ -10,7 +10,7 @@ const Video = (props) =>    {
 
                         <LazyLoadImage
                             alt="poster"
-                            width={ 570 }
+                            width={500}
                             height={ 390 }
                             src=""
                             threshold={ 200 }

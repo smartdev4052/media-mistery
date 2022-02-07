@@ -16,9 +16,6 @@ function InfoOne ( props ) {
         e.currentTarget.classList.add( 'active' );
     }
 
-    if ( !product ) {
-        return <div></div>
-    }
 
     return (
         <Tabs selectedTabClassName="show" selectedTabPanelClassName="active show">
@@ -37,7 +34,7 @@ function InfoOne ( props ) {
                     </Tab>
 
                     <Tab className="nav-item">
-                        <span className="nav-link" >Reviews ({ product.review })</span>
+                        <span className="nav-link" >Reviews (2)</span>
                     </Tab>
                 </TabList>
 
@@ -93,8 +90,8 @@ function InfoOne ( props ) {
 
                                         <div className="ratings-container">
                                             <div className="ratings">
-                                                <div className="ratings-val" style={ { width: product.ratings * 20 + '%' } }></div>
-                                                <span className="tooltip-text">{ product.ratings.toFixed( 2 ) }</span>
+                                                <div className="ratings-val" style={ { width: '100%' } }></div>
+                                                <span className="tooltip-text">{ 100 }</span>
                                             </div>
                                         </div>
                                         <span className="review-date mb-1">6 days ago</span>
@@ -121,8 +118,8 @@ function InfoOne ( props ) {
 
                                         <div className="ratings-container">
                                             <div className="ratings">
-                                                <div className="ratings-val" style={ { width: product.ratings * 20 + '%' } }></div>
-                                                <span className="tooltip-text">{ product.ratings.toFixed( 2 ) }</span>
+                                                <div className="ratings-val" style={ { width: '100%' } }></div>
+                                                <span className="tooltip-text">{ 100 }</span>
                                             </div>
                                         </div>
 
